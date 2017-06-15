@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_horizontal_margin">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view_sound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="@dimen/md_keylines"
+            android:layout_marginLeft="@dimen/md_keylines"
+            android:layout_marginRight="@dimen/md_keylines"
+            android:background="@color/iron"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/cardview_shadow_start_color">
+
+            <RelativeLayout
+                android:id="@+id/sound"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/sound_image"
+                    android:layout_width="174dp"
+                    android:layout_height="160dp"
+                    android:layout_alignParentTop="true"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_horizontal_margin"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/sound_sensor"
+                    tools:src="@drawable/sound_sensor" />
+
+                <TextView
+                    android:id="@+id/sound_title"
+                    android:layout_width="175dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="28dp"
+                    android:layout_toRightOf="@+id/sound_image"
+                    android:background="@color/white"
+                    android:paddingEnd="@dimen/activity_horizontal_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:singleLine="true"
+                    android:textColor="@color/primary_dark"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/sound_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_above="@+id/sound_button"
+                    android:layout_toEndOf="@+id/sound_image"
+                    android:layout_toRightOf="@+id/sound_image"
+                    android:background="@color/white"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    android:paddingEnd="@dimen/activity_horizontal_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:singleLine="true"
+                    android:textColor="@color/primary_dark"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/sound_button"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/sound_image"
+                    android:background="@color/primary_dark"
+                    android:text="Ses Detay Göster"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/card_view_temp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/md_keylines"
+            android:layout_marginLeft="@dimen/md_keylines"
+            android:layout_marginRight="@dimen/md_keylines"
+            android:layout_marginTop="5dp"
+            android:background="@color/iron"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/cardview_shadow_start_color">
+
+            <RelativeLayout
+                android:id="@+id/temp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/temp_image"
+                    android:layout_width="174dp"
+                    android:layout_height="160dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/temp_sensor"
+                    tools:src="@drawable/sound_sensor" />
+
+                <TextView
+                    android:id="@+id/temp_title"
+                    android:layout_width="175dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="28dp"
+                    android:layout_toRightOf="@+id/temp_image"
+                    android:background="@color/white"
+                    android:paddingEnd="@dimen/activity_horizontal_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:singleLine="true"
+                    android:textColor="@color/primary_dark"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/temp_value"
+                    android:layout_width="75dp"
+                    android:layout_height="50dp"
+                    android:layout_above="@+id/temp_button"
+                    android:layout_toEndOf="@+id/temp_image"
+                    android:layout_toRightOf="@+id/temp_image"
+                    android:background="@color/white"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    android:paddingEnd="@dimen/activity_horizontal_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:singleLine="true"
+                    android:textColor="@color/primary_dark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/temp_degree"
+                    android:layout_width="75dp"
+                    android:layout_height="50dp"
+                    android:layout_alignBaseline="@+id/temp_value"
+                    android:layout_alignBottom="@+id/temp_value"
+                    android:layout_marginLeft="71dp"
+                    android:layout_marginStart="71dp"
+                    android:layout_toEndOf="@+id/temp_image"
+                    android:layout_toRightOf="@+id/temp_image"
+                    android:background="@color/white"
+                    android:singleLine="true"
+                    android:textColor="@color/primary_dark"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/temp_button"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/temp_image"
+                    android:background="@color/primary_dark"
+                    android:text="Sıcaklık Detay Göster"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/card_view_motion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/md_keylines"
+            android:layout_marginLeft="@dimen/md_keylines"
+            android:layout_marginRight="@dimen/md_keylines"
+            android:layout_marginTop="5dp"
+            android:background="@color/iron"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/cardview_shadow_start_color">
+
+            <RelativeLayout
+                android:id="@+id/motion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/motion_image"
+                    android:layout_width="174dp"
+                    android:layout_height="160dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/motion_sensor"
+                    tools:src="@drawable/sound_sensor" />
+
+                <TextView
+                    android:id="@+id/motion_title"
+                    android:layout_width="175dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="28dp"
+                    android:layout_toRightOf="@+id/motion_image"
+                    android:background="@color/white"
+                    android:paddingEnd="@dimen/activity_horizontal_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:singleLine="true"
+                    android:textColor="@color/primary_dark"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/motion_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_above="@+id/motion_button"
+                    android:layout_toEndOf="@+id/motion_image"
+                    android:layout_toRightOf="@+id/motion_image"
+                    android:background="@color/white"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    android:paddingEnd="@dimen/activity_horizontal_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:singleLine="true"
+                    android:textColor="@color/primary_dark"
+                    android:textSize="20sp" />
+
+
+                <Button
+                    android:id="@+id/motion_button"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/motion_image"
+                    android:background="@color/primary_dark"
+                    android:text="Hareket Detay Göster"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/card_view_gas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/md_keylines"
+            android:layout_marginLeft="@dimen/md_keylines"
+            android:layout_marginRight="@dimen/md_keylines"
+            android:layout_marginTop="5dp"
+            android:background="@color/iron"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/cardview_shadow_start_color">
+
+            <RelativeLayout
+                android:id="@+id/gas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/gas_image"
+                    android:layout_width="174dp"
+                    android:layout_height="160dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/gas_sensor"
+                    tools:src="@drawable/sound_sensor" />
+
+                <TextView
+                    android:id="@+id/gas_title"
+                    android:layout_width="175dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="28dp"
+                    android:layout_toRightOf="@+id/gas_image"
+                    android:background="@color/white"
+                    android:paddingEnd="@dimen/activity_horizontal_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:singleLine="true"
+                    android:textColor="@color/primary_dark"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/gas_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_above="@+id/gas_button"
+                    android:layout_toEndOf="@+id/gas_image"
+                    android:layout_toRightOf="@+id/gas_image"
+                    android:background="@color/white"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:singleLine="true"
+                    android:textColor="@color/primary_dark"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/gas_button"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/gas_image"
+                    android:background="@color/primary_dark"
+                    android:text="Gaz Detay Göster"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+</ScrollView>

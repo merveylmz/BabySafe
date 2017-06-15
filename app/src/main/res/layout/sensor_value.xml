@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginBottom="@dimen/tile_padding"
+    android:layout_marginLeft="@dimen/tile_padding"
+    android:layout_marginRight="@dimen/tile_padding"
+    android:background="@color/iron"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/cardview_shadow_start_color">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/sensor_image"
+            android:layout_width="174dp"
+            android:layout_height="160dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/sound_sensor" />
+
+        <TextView
+            android:id="@+id/sensor_title"
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="28dp"
+            android:layout_toRightOf="@+id/sensor_image"
+            android:background="@color/white"
+            android:singleLine="true"
+            android:textColor="@color/primary_dark"
+            android:textSize="20sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/sensor_value"
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:layout_above="@+id/action_button"
+            android:layout_alignTop="@+id/sensor_degree"
+            android:layout_toRightOf="@+id/sensor_image"
+            android:layout_toStartOf="@+id/sensor_degree" />
+
+        <TextView
+            android:id="@+id/sensor_degree"
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:layout_above="@+id/action_button"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/white"
+            android:singleLine="true"
+            android:textColor="@color/primary_dark"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/action_button"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/sensor_image"
+            android:background="@color/primary_dark"
+            android:text="Detay Göster"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

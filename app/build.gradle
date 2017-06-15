@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.1'
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "com.babysafe.babysafe"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions{
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+    }
+    allprojects {
+        repositories {
+            jcenter()
+            maven { url "https://jitpack.io" }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.android.support:support-v4:25.0.0'
+    compile 'com.android.support:design:25.0.1'
+    compile 'com.jakewharton:butterknife:7.0.1'
+
+    // retrofit, gson
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+
+    // cardview
+    compile 'com.android.support:recyclerview-v7:25.0.+'
+    compile 'com.android.support:cardview-v7:25.0.+'
+
+    // ubidots
+    compile 'com.ubidots:ubidots-java:1.6.4'
+
+    // apache
+    compile 'org.apache.httpcomponents:httpcore:4.4.1'
+    compile 'org.apache.httpcomponents:httpclient:4.5'
+    compile 'com.squareup.okhttp:okhttp:2.6.0'
+
+    // chart View
+    compile 'com.github.PhilJay:MPAndroidChart:v2.1.6'
+}
